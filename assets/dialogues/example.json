@@ -1,0 +1,123 @@
+{
+   "intro":{
+      "1":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"Dialogues have the speaker(top left), text(this paragraph), and icon(right).\nClick anywhere in this box to go to proceed.",
+         "next":2
+      },
+      "2":{
+         "speaker":"Princess",
+         "portrait":"princess_portrait.jpg",
+         "type":"continuous",
+         "text":"Dialogues can swich between any amount of speakers.",
+         "next":3
+      },
+      "3":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"Check out test.json for how to load in dialogue.",
+         "next":4
+      },
+      "4":{
+         "speaker":"Princess",
+         "portrait":"princess_portrait.jpg",
+         "type":"continuous",
+         "text":"A long paragraph will wrap around the box. A long paragraph will wrap around the box. A long paragraph will wrap around the box. A long paragraph will wrap around the box. A long paragraph will wrap around the box. Scrolling not supported currently, so overflow needs to be a new node in the JSON.",
+         "next":5
+      },
+      "5":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"Line 1.\nLine 2.\nLine 3.\nA box fits 4 lines perfectly by default.",
+         "next":6
+      },
+      "6":{
+         "speaker":null,
+         "portrait":null,
+         "type":"continuous",
+         "text":"A dialogue doesn't need a speaker or a portrait. A dialogue can also have either one and not the other.",
+         "next":7
+      },
+      "7":{
+         "speaker":null,
+         "portrait":"princess_portrait.jpg",
+         "type":"choice",
+         "choices":{
+            "0":"Top",
+            "1":"Bottom"
+         },
+         "text":"[Choices allow dialogue to branch out]",
+         "next":{
+            "0":9,
+            "1":9
+         }
+      },
+      "9":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"choice",
+         "choices":{
+            "0":"Go North",
+            "1":"Go East",
+            "2":"Go South",
+            "3":"Go West"
+         },
+         "text":"By default, 4 buttons fit but there is no limitation otherwise.",
+         "next":{
+            "0":10,
+            "1":11,
+            "2":12,
+            "3":13
+         }
+      },
+      "10":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"[You go north]",
+         "next":20
+      },
+      "11":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"[You go east]",
+         "next":20
+      },
+      "12":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"[You go south]",
+         "next":20
+      },
+      "13":{
+         "speaker":"Knight",
+         "portrait":"knight_portrait.jpg",
+         "type":"continuous",
+         "text":"[You go west]",
+         "next":20
+      },
+      "20":{
+         "speaker":"Princess",
+         "portrait":"princess_portrait.jpg",
+         "type":"continuous",
+         "text":"A negative 'next' value terminates the dialogue box. The value can be used to determine outcome.",
+         "next":-1
+      }
+   },
+   
+   "some-other-dialogue-set":{
+      "1":{
+         "speaker":"speaker",
+         "portrait":"speaker.jpg",
+         "type":"continuous",
+         "text":"A new dialogue starts from an id of 1.",
+         "next":-2
+      }
+   }
+}
